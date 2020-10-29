@@ -27,8 +27,6 @@ void FU(int D[maxV][maxV], int V,int start)
 int main()
 {
     int start=0;
-    cout<<"Enter the number of the starting vertex >> ";
-    cin>>start;
     int GR[6][6]={
             {0, 8, 4, 0, 0, 0},
             {0, 0, 0, 0, 6, 3},
@@ -36,7 +34,12 @@ int main()
             {0, 0, 0, 0, 3, 1},
             {0, 0, 0, 0, 0, 4},
             {0, 0, 0, 0, 0, 0}};
+    while(true){
+    cout<<"Enter the number of the starting vertex >> ";
+    cin>>start;
+    if(start==0)break;
     cout<<"The length of the route from start > x\t\n";
     FU(GR, 6,start);
+    }
     return 0;
 }
